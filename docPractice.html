@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <title>J_Query Practice</title>
+        <style>
+
+            p {
+
+                color:blue;
+
+            }
+            .red{
+
+                color : red;
+
+            }
+            #Charlie{
+
+                height: 200px;
+                width: 150px;
+
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div>
+        <button id="myButton">Click Me!</button>
+        <button id="otherButton">Me Next!</button>
+        </div>
+
+        <h1>This is me using the hide/show method</h1>
+
+        <button id="toggleButton">Toggle</button>
+        <p id="toggle">Let's test out the toggle method!</p>
+
+        <br>
+        <br>
+
+        <button id="Raiders">Raiders!</button>
+        <button id="comeBack">Come back!</button>
+        <img id="picture" src="White-Raider-logo.jpg" alt="Raiders Logo">
+        <button id="slideAndToggle">Watch Me!</button>
+
+        <br>
+        <br>
+
+
+        <img id="Charlie" src="Snapchat--1564722151617254826.jpg" at="Charlie's picture">
+        <br>
+        <br>
+        <button id="slideUp">IN!</btton>
+        <button id="slideDown">OUT!</button>
+
+        <p>Well Hello There!</p>
+        <p>Turn Me Red!</p>
+        <button id="color">Red Ink!</button>
+
+        <br>
+        <br>
+
+        <b id="before">UP?</b>
+        <button id="clickForB">Click.</button>
+        <b id="after">What's</b>
+        <button id="clickForA">Click now!</button>
+
+        <h1 id="itIs">Hi my name is:</h1>
+        <button id="myName">Name</button>
+
+        <br>
+        <br>
+
+        <button id="ourButton">BUTTON</button>
+
+        <br>
+        <br>
+
+        <div>
+        <button id="Umm">Who</button>
+        <b id="greetings">Hello</b>
+        </div>
+
+        <br>
+
+        <div>
+            <input id="searchBar" type="text" value="Search">
+        </div>
+
+        <br>
+        <br>
+
+        <ul class="List">
+            <il>One</il>
+            <il>Two</il>
+        </ul>
+
+        <script>
+            
+            $("#myButton").click(function(){
+
+                $("h1").hide();
+
+            });
+            
+            $("#otherButton").click(function(){
+
+                $("h1").show();
+
+            });
+
+            $("#toggleButton").click(function(){
+
+                $("#toggle").toggle(1000);
+
+            });
+
+            $("#Raiders").click(function(){
+
+                $("#picture").slideUp(1000);
+
+            });
+
+            $("#comeBack").click(function(){
+
+                $("#picture").slideDown(1000);
+                    
+            });
+
+            $("#slideAndToggle").click(function(){
+
+                $("#picture").slideToggle(1000);
+
+            });
+
+            $("#slideUp").click(function(){
+
+                $("#Charlie").fadeIn(1000)
+
+            });
+
+            $("#slideDown").click(function(){
+
+                $("#Charlie").fadeOut(1000)
+
+            });
+
+            $("#color").click(function(){
+
+                $("p").addClass("red")
+
+            });
+        
+            $("#clickForB").click(function(){
+
+                $("#before").before("<b>What's </b>")
+
+            });
+
+            $("#clickForA").click(function(){
+
+                $("#after").after("<b> UP?</b>")
+
+            });
+
+            $("#myName").click(function(){
+
+                $("#itIs").append("<h1> Slim Shady</h1>")
+
+            });
+
+            $("#ourButton").click(function(){
+
+                $("#ourButton").html('<h2>This is our button</h2>');
+
+            });
+
+            $("#Umm").click(function(){
+
+                $("#greetings").attr("<b>World</b>")
+
+            });
+
+            console.log($("#searchBar").val());
+
+            $(".List").click(function(){
+
+                $(".List").text('Three')
+
+            })
+
+        </script>
+
+    </body>
+</html>
